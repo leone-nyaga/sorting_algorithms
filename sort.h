@@ -29,6 +29,8 @@ void selection_sort(int *array, size_t size);
 int lomuto(int *array, size_t size, int low, int high);
 void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void swap_nodes(listint_t *node1, listint_t *node2, listint_t **list);
 
 #endif /* SORT_H */
 
