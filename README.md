@@ -1,51 +1,69 @@
 # sorting_algorithms
 
-Background Context
+![meme]()
+
+## Background Context
+
 This project is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.
 
-Resources
+## Resources
+
 Read or watch:
 
-Sorting algorithm
-Big O notation
-Sorting algorithms animations
-15 sorting algorithms in 6 minutes (WARNING: The following video can trigger seizure/epilepsy. It is not required for the project, as it is only a funny visualization of different sorting algorithms)
-CS50 Algorithms explanation in detail by David Malan
-All about sorting algorithms
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
++ Sorting algorithm
++ Big O notation
++ Sorting algorithms animations
++ 15 sorting algorithms in 6 minutes (WARNING: The following video can trigger seizure/epilepsy. It is not required for the project, as it is only a funny visualization of different sorting algorithms)
++ CS50 Algorithms explanation in detail by David Malan
++ All about sorting algorithms
 
-General
-At least four different sorting algorithms
-What is the Big O notation, and how to evaluate the time complexity of an algorithm
-How to select the best sorting algorithm for a given input
-What is a stable sorting algorithm
-Copyright - Plagiarism
-You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-You are not allowed to publish any content of this project.
-Any form of plagiarism is strictly forbidden and will result in removal from the program.
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-Unless specified otherwise, you are not allowed to use the standard library. Any use of functions like printf, puts, … is totally forbidden.
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions should be included in your header file called sort.h
-Don’t forget to push your header file
-All your header files should be include guarded
-A list/array does not need to be sorted if its size is less than 2.
-GitHub
-There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.
+## Learning Objectives
 
-More Info
-Data Structure and Functions
-For this project you are given the following print_array, and print_list functions:
+At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique), without the help of Google:
+
+## General
+
++ At least four different sorting algorithms
++ What is the Big O notation, and how to evaluate the time complexity of an algorithm
++ How to select the best sorting algorithm for a given input
++ What is a stable sorting algorithm
+
+## Copyright - Plagiarism
+
++ You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
++ You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
++ You are not allowed to publish any content of this project.
++ Any form of plagiarism is strictly forbidden and will result in removal from the program.
+
+## Requirements
+
+## General
+
++ Allowed editors: vi, vim, emacs
++ All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
++ All your files should end with a new line
++ A README.md file, at the root of the folder of the project, is mandatory
++ Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
++ You are not allowed to use global variables
++ No more than 5 functions per file
++ Unless specified otherwise, you are not allowed to use the standard library. Any use of functions like printf, puts, … is totally forbidden.
++ In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
++ The prototypes of all your functions should be included in your header file called sort.h
++ Don’t forget to push your header file
++ All your header files should be include guarded
++ A list/array does not need to be sorted if its size is less than 2.
+
+## GitHub
+
+**There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score**.
+
+## More Info
+
+## Data Structure and Functions
+
++ For this project you are given the following print_array, and print_list functions:
+
+```c
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -69,6 +87,9 @@ void print_array(const int *array, size_t size)
     }
     printf("\n");
 }
+```
+
+```c
 #include <stdio.h>
 #include "sort.h"
 
@@ -92,9 +113,13 @@ void print_list(const listint_t *list)
     }
     printf("\n");
 }
-Our files print_array.c and print_list.c (containing the print_array and print_list functions) will be compiled with your functions during the correction.
-Please declare the prototype of the functions print_array and print_list in your sort.h header file
-Please use the following data structure for doubly linked list:
+```
+
++ Our files print_array.c and print_list.c (containing the print_array and print_list functions) will be compiled with your functions during the correction.
++ Please declare the prototype of the functions print_array and print_list in your sort.h header file
++ Please use the following data structure for doubly linked list:
+
+```c
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -108,39 +133,46 @@ typedef struct listint_s
     struct listint_s *prev;
     struct listint_s *next;
 } listint_t;
+```
+
 Please, note this format is used for Quiz and Task questions.
 
-O(1)
-O(n)
-O(n!)
-n square -> O(n^2)
-log(n) -> O(log(n))
-n * log(n) -> O(nlog(n))
-n + k -> O(n+k)
-…
++ O(1)
++ O(n)
++ O(n!)
++ n square -> O(n^2)
++ log(n) -> O(log(n))
++ n * log(n) -> O(nlog(n))
++ n + k -> O(n+k)
++ …
+
 Please use the “short” notation (don’t use constants). Example: O(nk) or O(wn) should be written O(n). If an answer is required within a file, all your answers files must have a newline at the end.
 
-Tests
-Here is a quick tip to help you test your sorting algorithms with big sets of random integers: Random.org
+## Tests
 
-Quiz questions
-Great! You've completed the quiz successfully! Keep going! (Show quiz)
-Tasks
+Here is a quick tip to help you test your sorting algorithms with big sets of random integers: [Random.org](https://www.random.org/integer-sets)
+
+## Quiz questions
+
+
+## Tasks
+
 0. Bubble sort
-mandatory
-Score: 97.08% (Checks completed: 100.0%)
 
+[Bubble Sort](https://youtu.be/lyZQPjUT5B4)
 
+Write a function that sorts an array of integers in ascending order using the [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) algorithm
 
-Write a function that sorts an array of integers in ascending order using the Bubble sort algorithm
++ Prototype: void bubble_sort(int *array, size_t size);
++ You’re expected to print the array after each time you swap two elements (See example below)
 
-Prototype: void bubble_sort(int *array, size_t size);
-You’re expected to print the array after each time you swap two elements (See example below)
 Write in the file 0-O, the big O notations of the time complexity of the Bubble sort algorithm, with 1 notation per line:
 
-in the best case
-in the average case
-in the worst case
++ in the best case
++ in the average case
++ in the worst case
+
+```bash
 alex@/tmp/sort$ cat 0-main.c 
 #include <stdio.h>
 #include <stdlib.h>
@@ -190,28 +222,31 @@ alex@/tmp/sort$ ./bubble
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
-alex@/tmp/sort$ 
+alex@/tmp/sort$
+```
+
 Repo:
 
-GitHub repository: sorting_algorithms
-File: 0-bubble_sort.c, 0-O
++ GitHub repository: sorting_algorithms
++ File: 0-bubble_sort.c, 0-O
   
 1. Insertion sort
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
 
+[Insertion Sort](https://youtu.be/ROalU379l3U)
 
+Write a function that sorts a doubly linked list of integers in ascending order using the [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) algorithm
 
-Write a function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm
++ Prototype: void insertion_sort_list(listint_t **list);
++ You are not allowed to modify the integer n of a node. You have to swap the nodes themselves.
++ You’re expected to print the list after each time you swap two elements (See example below)
 
-Prototype: void insertion_sort_list(listint_t **list);
-You are not allowed to modify the integer n of a node. You have to swap the nodes themselves.
-You’re expected to print the list after each time you swap two elements (See example below)
 Write in the file 1-O, the big O notations of the time complexity of the Insertion sort algorithm, with 1 notation per line:
 
-in the best case
-in the average case
-in the worst case
++ in the best case
++ in the average case
++ in the worst case
+
+```bash
 alex@/tmp/sort$ cat 1-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -297,26 +332,29 @@ alex@/tmp/sort$ ./insertion
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 alex@/tmp/sort$
+```
+
 Repo:
 
-GitHub repository: sorting_algorithms
-File: 1-insertion_sort_list.c, 1-O
++ GitHub repository: sorting_algorithms
++ File: 1-insertion_sort_list.c, 1-O
   
 2. Selection sort
-mandatory
-Score: 97.08% (Checks completed: 100.0%)
 
+[Selection Sort](https://youtu.be/Ns4TPTC8whw)
 
+Write a function that sorts an array of integers in ascending order using the [Selection sort](https://en.wikipedia.org/wiki/Selection_sort) algorithm
 
-Write a function that sorts an array of integers in ascending order using the Selection sort algorithm
++ Prototype: void selection_sort(int *array, size_t size);
++ You’re expected to print the array after each time you swap two elements (See example below)
 
-Prototype: void selection_sort(int *array, size_t size);
-You’re expected to print the array after each time you swap two elements (See example below)
 Write in the file 2-O, the big O notations of the time complexity of the Selection sort algorithm, with 1 notation per line:
 
-in the best case
-in the average case
-in the worst case
++ in the best case
++ in the average case
++ in the worst case
+
+```bash
 alex@/tmp/sort$ cat 2-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -354,28 +392,31 @@ alex@/tmp/sort$ ./select
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 alex@/tmp/sort$
+```
+
 Repo:
 
-GitHub repository: sorting_algorithms
-File: 2-selection_sort.c, 2-O
++ GitHub repository: sorting_algorithms
++ File: 2-selection_sort.c, 2-O
   
 3. Quick sort
-mandatory
-Score: 47.08% (Checks completed: 50.0%)
 
+[Quick Sort](https://youtu.be/ywWBy6J5gz8)
 
+Write a function that sorts an array of integers in ascending order using the [Quick sort](https://en.wikipedia.org/wiki/Quicksort) algorithm
 
-Write a function that sorts an array of integers in ascending order using the Quick sort algorithm
++ Prototype: void quick_sort(int *array, size_t size);
++ You must implement the Lomuto partition scheme.
++ The pivot should always be the last element of the partition being sorted.
++ You’re expected to print the array after each time you swap two elements (See example below)
 
-Prototype: void quick_sort(int *array, size_t size);
-You must implement the Lomuto partition scheme.
-The pivot should always be the last element of the partition being sorted.
-You’re expected to print the array after each time you swap two elements (See example below)
 Write in the file 3-O, the big O notations of the time complexity of the Quick sort algorithm, with 1 notation per line:
 
-in the best case
-in the average case
-in the worst case
++ in the best case
++ in the average case
++ in the worst case
+
+```bash
 alex@/tmp/sort$ cat 3-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -412,23 +453,26 @@ alex@/tmp/sort$ ./quick
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 alex@/tmp/sort$
+```
+
 Repo:
 
-GitHub repository: sorting_algorithms
-File: 3-quick_sort.c, 3-O
++ GitHub repository: sorting_algorithms
++ File: 3-quick_sort.c, 3-O
    
 4. Shell sort - Knuth Sequence
-#advanced
-Score: 96.82% (Checks completed: 100.0%)
-Write a function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence
 
-Prototype: void shell_sort(int *array, size_t size);
-You must use the following sequence of intervals (a.k.a the Knuth sequence):
-n+1 = n * 3 + 1
-1, 4, 13, 40, 121, ...
-You’re expected to print the array each time you decrease the interval (See example below).
-No big O notations of the time complexity of the Shell sort (Knuth sequence) algorithm needed - as the complexity is dependent on the size of array and gap
+Write a function that sorts an array of integers in ascending order using the [Shell sort](https://en.wikipedia.org/wiki/Shellsort) algorithm, using the Knuth sequence
 
++ Prototype: void shell_sort(int *array, size_t size);
++ You must use the following sequence of intervals (a.k.a the Knuth sequence):
+  + n+1 = n * 3 + 1
+  + 1, 4, 13, 40, 121, ...
++ You’re expected to print the array each time you decrease the interval (See example below).
+
+**No big O notations of the time complexity of the Shell sort (Knuth sequence) algorithm needed - as the complexity is dependent on the size of array and gap**
+
+```bash
 alex@/tmp/sort$ cat 100-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -460,19 +504,21 @@ alex@/tmp/sort$ ./shell
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 alex@/tmp/sort$
+```
+
 Repo:
 
-GitHub repository: sorting_algorithms
-File: 100-shell_sort.c
++ GitHub repository: sorting_algorithms
++ File: 100-shell_sort.c
   
 5. Cocktail shaker sort
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
-Write a function that sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm
 
-Prototype: void cocktail_sort_list(listint_t **list);
-You are not allowed to modify the integer n of a node. You have to swap the nodes themselves.
-You’re expected to print the list after each time you swap two elements (See example below)
+Write a function that sorts a doubly linked list of integers in ascending order using the [Cocktail shaker sort](https://en.wikipedia.org/wiki/Counting_sort) algorithm
+
++ Prototype: void cocktail_sort_list(listint_t **list);
++ You are not allowed to modify the integer n of a node. You have to swap the nodes themselves.
++ You’re expected to print the list after each time you swap two elements (See example below)
+
 Write in the file 101-O, the big O notations of the time complexity of the Cocktail shaker sort algorithm, with 1 notation per line:
 
 + in the best case
