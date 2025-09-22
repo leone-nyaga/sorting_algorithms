@@ -1,6 +1,6 @@
 # sorting_algorithms
 
-![meme]()
+![meme](https://github.com/leone-nyaga/sorting_algorithms/blob/main/images/willy-wonka.png)
 
 ## Background Context
 
